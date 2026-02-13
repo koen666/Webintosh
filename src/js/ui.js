@@ -47,7 +47,7 @@ widget-button {
     -webkit-user-select: none;
     box-shadow: 0 0 0 0 rgba(0,0,0,0.15), 0 1px 0 0 rgba(0,0,0,0.05);
 }`;
-        let p_style = `margin: 0; padding: 0; height: 50%;`;
+        let p_style = `margin: 0; padding: 0;`;
         const p = document.createElement('p');
         const cmd = this.getAttribute('command');
         p.innerHTML = this.innerHTML;
