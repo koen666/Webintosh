@@ -30,14 +30,12 @@ const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 
 // Svg Positioning
 function svg() {
-    let timeSvgRect = timeSvg.getBoundingClientRect();
-    let dateSvgRect = dateSvg.getBoundingClientRect();
+    const centerX = document.body.clientWidth / 2;
 
-    let timePos = (document.body.clientWidth - timeSvgRect.width) / 2;
-    let datePos = (document.body.clientWidth - dateSvgRect.width) / 2;
-
-    timeSvg.setAttribute('x', timePos);
-    dateSvg.setAttribute('x', datePos);
+    timeSvg.setAttribute('text-anchor', 'middle');
+    dateSvg.setAttribute('text-anchor', 'middle');
+    timeSvg.setAttribute('x', centerX);
+    dateSvg.setAttribute('x', centerX);
 }
 
 svg();
